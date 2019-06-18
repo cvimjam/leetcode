@@ -34,7 +34,6 @@ public class ReverseInteger {
             out = out * 10 + (cinput % 10);
             cinput = cinput / 10;
         }
-
         if (out > Integer.MAX_VALUE || out < Integer.MIN_VALUE) {
             return 0;
         }
