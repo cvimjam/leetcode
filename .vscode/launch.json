@@ -9,8 +9,20 @@
             "name": "Debug (Launch) - Current File",
             "request": "launch",
             "mainClass": "${file}",
-            "internalConsoleOptions": 
+            "args": ["2147483647"]
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-ReverseInteger",
+            "request": "launch",
+            "mainClass": "ReverseInteger",
+            "args": ["123"]
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-TwoSumSortedBestSolution",
+            "request": "launch",
+            "mainClass": "TwoSumSortedBestSolution"
         }
-  
     ]
 }
