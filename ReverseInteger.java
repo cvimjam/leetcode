@@ -17,7 +17,11 @@ Output: 21
 
 Note:
 Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231,  231 − 1]. 
-For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows. */
+For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows. 
+*/
+
+import com.sun.org.apache.xalan.internal.xsltc.util.IntegerArray;
+
 
 
 public class ReverseInteger {
@@ -31,7 +35,6 @@ public class ReverseInteger {
             out = out * 10 + (cinput % 10);
             cinput = cinput / 10;
         }
-
         if (out > Integer.MAX_VALUE || out < Integer.MIN_VALUE) {
             return 0;
         }
