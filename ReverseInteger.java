@@ -1,5 +1,3 @@
-import com.sun.org.apache.xalan.internal.xsltc.util.IntegerArray;
-
 /* Given a 32-bit signed integer, reverse digits of an integer.
 
 Example 1:
@@ -21,12 +19,13 @@ Note:
 Assume we are dealing with an environment which could only store integers within the 32-bit signed integer range: [−231,  231 − 1]. 
 For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows. */
 
+
 public class ReverseInteger {
 
     public static int reverse(int input) {
 
         int cinput = input;
-        Double out = 0;
+        Double out = new Double(0);
 
         while (cinput != 0) {
             out = out * 10 + (cinput % 10);
@@ -37,12 +36,28 @@ public class ReverseInteger {
             return 0;
         }
 
-        return (Integer) Math.round(out);
+        return (int) Math.round(out);
+    }
+    
+    public static int reverseWithoutLong(int x) {
+        int prevRev = 0 , rev= 0;
+        while( x != 0){
+            rev= rev*10 + x % 10;
+            if((rev - x % 10) / 10 != prevRev){
+                return 0;
+            }
+            prevRev = rev;
+            x= x/10;
+        }
+        return rev;
     }
 
     public static void main(String argv[]) {
 
-        System.out.println(ReverseInteger.reverse(2147483647));
+        for (String var : argv) {
+            System.out.println(ReverseInteger.reverseWithoutLong(new Integer(var)));    
+        }
+        
 
     }
 
