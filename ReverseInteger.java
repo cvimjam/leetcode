@@ -20,10 +20,6 @@ Assume we are dealing with an environment which could only store integers within
 For the purpose of this problem, assume that your function returns 0 when the reversed integer overflows. 
 */
 
-import com.sun.org.apache.xalan.internal.xsltc.util.IntegerArray;
-
-
-
 public class ReverseInteger {
 
     public static int reverse(int input) {
